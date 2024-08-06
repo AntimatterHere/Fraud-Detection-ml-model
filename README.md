@@ -1,13 +1,13 @@
 # Fraud-Detection-ml-model
-# It is a machine learning model that can used to detect fraud during the transaction through credit card.
-# Data columns meaning
-## step: represents a unit of time where 1 step equals 1 hour
-## type: type of online transaction
-## amount: the amount of the transaction
-## nameOrig: customer starting the transaction
-## oldbalanceOrg: balance before the transaction
-## newbalanceOrig: balance after the transaction
-## nameDest: recipient of the transaction
-## oldbalanceDest: initial balance of recipient before the transaction
-## newbalanceDest: the new balance of recipient after the transaction
-## isFraud: fraud transaction
+It is a machine learning model that can used to detect fraud during the transaction through credit card.
+## Data columns meaning
+- step: represents a unit of time where 1 step equals 1 hour
+- type: type of online transaction
+- amount: the amount of the transaction
+- nameOrig: customer starting the transaction
+- oldbalanceOrg: balance before the transaction
+- newbalanceOrig: balance after the transaction
+- nameDest: recipient of the transaction
+- oldbalanceDest: initial balance of recipient before the transaction
+- newbalanceDest: the new balance of recipient after the transaction
+- isFraud: fraud transaction
