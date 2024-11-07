@@ -55,8 +55,20 @@ imputer.fit(y)
 y = imputer.transform(y).reshape(-1)
 print(y)
 
-import xgboost as xgb
-xtrain, xtest, ytrain, ytest = train_test_split(x, y, test_size=0.3, random_state=42)
-model =  xgb.XGBClassifier()
-model.fit(xtrain, ytrain)
-print(model.score(xtest, ytest))
+from sklearn.tree import DecisionTreeClassifier
+classifier=DecisionTreeClassifier(criterion='entropy',random_state=42)
+classifier.fit(X_train,y_train)
+
+#predicting test sets:
+
+y_pred=lr.predict(X_test)
+print(np.concatenate((y_pred.reshape(len(y_pred),1),y_test.reshape(len(y_test),1)),1))
+
+# Making the Confusion Matrix
+from sklearn.metrics import confusion_matrix, accuracy_score
+y_pred = lr.predict(X_test)
+cm = confusion_matrix(y_test, y_pred)
+print(cm)
+accuracy_score(y_test, y_pred)
+
+
